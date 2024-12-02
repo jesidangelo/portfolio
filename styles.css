@@ -1,0 +1,459 @@
+/* Estilos Generales */  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #0cb7f2;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.fullscreen-header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.profile-pic-large {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 5px solid #0cb7f2;
+}
+
+h1, h2 {
+  font-family: "Heading Now 31-38", sans-serif; /* Aplicación de la fuente */
+  color: #333;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+h1 .highlight {
+  color: #0cb7f2;
+}
+
+.subtitle {
+  color: #777;
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+nav a:hover {
+  color: #0cb7f2;
+}
+
+.about-button {
+  margin-top: 10px;
+  padding: 12px 25px;
+  background-color: #0cb7f2;
+  border: none;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.about-button:hover {
+  background-color: #089bcc;
+}
+
+/* Estilos para "Sobre Mí" */
+.about-section {
+  background: linear-gradient(50deg, #0cb7f2, #ffffff);
+  height: 100vh; /* Ocupar toda la ventana del navegador */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0; /* Elimina cualquier margen externo */
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+.about-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: left; /* Cambia la alineación del texto */
+  margin-left: 20px; /* Agrega margen izquierdo */
+}
+
+.about-text h2 {
+  font-size: 3em; /* Tamaño de fuente más grande */
+  margin: 20px 0; /* Márgenes superior e inferior */
+  text-align: center; /* Centra el título */
+}
+
+.about-text p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.about-text .highlight {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Efectos de interacción */
+.about-section:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+.about-text strong {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-text {
+    margin-left: 0; /* Elimina margen izquierdo en dispositivos móviles */
+    text-align: center; /* Centra texto en dispositivos móviles */
+  }
+}
+
+/* Estilos de Secciones Generales */
+.content-box {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Carrusel */
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  animation: slide 10s infinite linear;
+}
+
+.carousel img {
+  flex: 0 0 33.33%;
+  height: 10cm;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 5px;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.icon {
+  margin: 0 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.icon img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.icon p {
+  font-size: 1em;
+  color: #333;
+}
+
+/* Contacto */
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.contact-item img {
+  width: 40px; /* Tamaño del icono de contacto */
+  height: 40px;
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+.contact-item p {
+  font-size: 1em;
+  color: #333;
+}
+
+.contact-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.contact-item a:hover p {
+  color: #0cb7f2;
+}
+
+/* Animación del Carrusel */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-33.33%);
+  }
+  45% {
+    transform: translateX(-33.33%);
+  }
+  50% {
+    transform: translateX(-66.66%);
+  }
+  70% {
+    transform: translateX(-66.66%);
+  }
+  75% {
+    transform: translateX(-100%);
+  }
+  95% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Sección Servicios */
+.servicios-section {
+  background-color: #fff; /* Fondo blanco */
+  height: 100vh; /* Ocupar toda la altura del navegador */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Ajustar contenido al inicio */
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.servicios-section h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin: 5px 0; /* Menor margen superior e inferior */
+}
+
+.servicios-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  border-radius: 12px; /* Bordes redondeados */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Tarjetas de Servicios */
+.servicio-card {
+  background-color: #fff;
+  border-radius: 8px; /* Bordes redondeados en las tarjetas */
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border: 5px solid #0cb7f2; /* Bordes gruesos con el color del margen de la foto de perfil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio-card:hover {
+  transform: translateY(-10px); /* Efecto de elevación al pasar el cursor */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más intensa en hover */
+}
+
+.servicio-card h3 {
+  font-size: 1.2em; /* Tamaño reducido del título */
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.3; /* Ajusta el espaciado entre líneas */
+  text-align: center; /* Centra el texto */
+}
+
+.servicio-card h3 span {
+  display: block; /* Coloca la segunda parte en una línea separada */
+}
+
+.servicio-card p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .servicios-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Sección PDFs */
+.pdf-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Centrar verticalmente la sección */
+  padding: 20px;
+}
+
+.pdf-content {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Alinear texto a la izquierda */
+}
+
+.pdf-content h1 {
+  margin-bottom: 20px; /* Espacio entre el título y el subtítulo */
+  text-align: center; /* Centrar el título */
+}
+
+.pdf-content h1 + div {
+  margin-bottom: 30px; /* Espaciado adicional entre título y subtítulo */
+  text-align: center;
+  font-size: 1.1em; /* Tamaño del subtítulo */
+  color: #555; /* Color gris suave */
+}
+
+.pdf-list {
+  display: flex;
+  flex-wrap: wrap; /* Permitir que los elementos pasen a la siguiente fila si es necesario */
+  gap: 20px; /* Espaciado entre los elementos */
+  justify-content: flex-start; /* Alineación inicial */
+}
+
+.pdf-item {
+  display: flex;
+  align-items: center;
+  width: calc(50% - 10px); /* Ocupa la mitad del ancho del contenedor */
+}
+
+.pdf-item img {
+  width: 5cm; /* Ancho de las miniaturas */
+  height: auto;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.pdf-item a {
+  color: #0cb7f2;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.pdf-item a:hover {
+  color: #089bcc;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .pdf-item {
+    width: 100%; /* Ocupa todo el ancho en dispositivos pequeños */
+  }
+}
+
+/* Sección de Pestañas Emergentes */
+.tabs-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.tabs-nav {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.tabs-nav li {
+  margin: 0 20px;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.tabs-nav li:hover {
+  color: #0cb7f2;
+}
+
+.tabs-content {
+  display: none; /* Oculta el contenido de las pestañas */
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabs-content.active {
+  display: block; /* Muestra el contenido de la pestaña activa */
+}
+
+footer {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  font-size: 0.9em;
+}
